@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Node-Graph-Editor/static/css/main.0c33f20a.css",
+    "main.js": "/React-Node-Graph-Editor/static/js/main.de39ab7a.js",
+    "index.html": "/React-Node-Graph-Editor/index.html",
+    "main.0c33f20a.css.map": "/React-Node-Graph-Editor/static/css/main.0c33f20a.css.map",
+    "main.de39ab7a.js.map": "/React-Node-Graph-Editor/static/js/main.de39ab7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c33f20a.css",
+    "static/js/main.de39ab7a.js"
+  ]
+}
