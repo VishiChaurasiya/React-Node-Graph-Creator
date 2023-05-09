@@ -4,6 +4,7 @@ import { Handle, Position } from "reactflow";
 const CustomNode = ({ data, id, onRemoveNode }) => {
   const [isHover, setIsHover] = useState(false);
 
+  // Handles removing a node with the given id.
   const handleRemoveNode = (data, id, onRemoveNode) => {
     const isRemove = window.confirm(`Do you want to remove the Node ${id}`);
     if (isRemove) onRemoveNode(id);

@@ -41,3 +41,5 @@ If you would like to contribute to this project, please follow these steps:
 ## License
 
 This project is not currently licensed.
+
+Visit the live application [here](https://vishichaurasiya.github.io/React-Node-Graph-Editor/).

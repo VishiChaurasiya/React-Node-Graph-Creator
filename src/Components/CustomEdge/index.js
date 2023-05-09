@@ -4,6 +4,7 @@ import "./index.css";
 
 const foreignObjectSize = 40;
 
+// Removes an edge between 'source' and 'target' nodes from a graph.
 const onEdgeClick = (evt, id, onRemoveEdge, source, target) => {
   evt.stopPropagation();
   const isRemove = window.confirm(

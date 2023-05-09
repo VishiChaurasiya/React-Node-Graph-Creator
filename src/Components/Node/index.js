@@ -43,11 +43,13 @@ export const Node = ({ toast }) => {
   const [nodeTypes, setNodeTypes] = useState({});
   const [nodeId, setNodeId] = useState(2);
 
+  // Removes the edge with the given id from the edges list and displays a success message.
   const onRemoveEdge = (id, source, target) => {
     setEdges((prevEdges) => prevEdges.filter((edge) => edge.id !== id));
     toast.success(`Edge ${source} - ${target} Removed Successfully`);
   };
 
+  // Removes the node with the given id from the nodes and edges list and displays a success message.
   const onRemoveNode = (id) => {
     setNodes((prevNodes) => prevNodes.filter((node) => node.id !== id));
     setEdges((prevEdges) =>
@@ -63,6 +65,7 @@ export const Node = ({ toast }) => {
           <ButtonEdge {...obj} onRemoveEdge={onRemoveEdge} />
         ),
       }),
+    // eslint-disable-next-line
     []
   );
 
@@ -73,9 +76,11 @@ export const Node = ({ toast }) => {
           <CustomNode data={data} id={id} onRemoveNode={onRemoveNode} />
         ),
       }),
+    // eslint-disable-next-line
     []
   );
 
+  // Updates the edges list with a new edge that connects two nodes.
   const onConnect = useCallback(
     (params) =>
       setEdges((eds) =>
@@ -91,6 +96,7 @@ export const Node = ({ toast }) => {
     [setEdges]
   );
 
+  // Adds a new node to the nodes list and displays a success message.
   const onAdd = useCallback(() => {
     const newNode = {
       id: `${nodeId}`,
@@ -104,6 +110,7 @@ export const Node = ({ toast }) => {
     setNodes((nds) => nds.concat(newNode));
     setNodeId(nodeId + 1);
     toast.success(`Node ${nodeId} Added Successfully`);
+    // eslint-disable-next-line
   }, [setNodes, nodes]);
 
   return (
